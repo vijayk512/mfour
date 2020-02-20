@@ -19,6 +19,7 @@ class UserController extends Controller
     {
         $data = [];
 
+        //Fetching all data.
         $data['users']= User::get();
 
         $status = 'success';
@@ -41,9 +42,10 @@ class UserController extends Controller
         $rules = array(
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email|unique:users,email', // checking rather the email is used or not.
         );
 
+        // Makes all validator rule. we can also add custom rules here as needed
         $validator = Validator::make($request->all(),$rules);
 
         if ($validator->fails()) {
@@ -84,12 +86,22 @@ class UserController extends Controller
     {
         $data = [];
 
-        $data['users']= User::where('id', $id)->first();
+        // fetching data with the id provided
+        $user = User::where('id', $id)->first();
 
-        $status = 'success';
-        $http_code = 200;
+        if($user){ // checking user is existing or not.
+            $data['users'] = $user;
+            $status = 'success';
+            $message = '';
+            $http_code = 200;
+        } else {
 
-        return response()->json( compact( 'status', 'data' ), $http_code );
+            $status = 'error';
+            $message = 'User not found!';
+            $http_code = 500; // Internal server error
+        }
+
+        return response()->json( compact( 'status', 'message', 'data' ), $http_code );
     }
 
     /**
@@ -104,7 +116,7 @@ class UserController extends Controller
         $data = [];
 
         $rules = array(
-            'email' => 'email|unique:users,email,'.$id,
+            'email' => 'email|unique:users,email,'.$id, // for updating checking the email is existing except the for his account.
         );
 
         $validator = Validator::make($request->all(),$rules);
@@ -150,7 +162,7 @@ class UserController extends Controller
         $user = User::find($id); // find the user first.
 
         if($user){
-            $user->delete();
+            $user->delete(); // deleting the user found.
             $status = 'success';
             $message = 'User deleted successfully!';
             $http_code = 200;
