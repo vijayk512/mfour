@@ -104,7 +104,7 @@ class UserController extends Controller
         $data = [];
 
         $rules = array(
-            'email' => 'email|unique:users,email'.$id,
+            'email' => 'email|unique:users,email,'.$id,
         );
 
         $validator = Validator::make($request->all(),$rules);
