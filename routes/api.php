@@ -13,10 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-//Route::get('/users', 'UsersController@getIndex');
-//Route::post('/users', 'UsersController@create');
-////Route::put('/users/user_id', 'UsersController@postIndex');
-///
+//In addition to generating resources that transform individual models,
+//you may generate resources that are responsible for transforming collections of models.
+//This allows your response to include links and other meta information that is relevant to an entire collection
+//of a given resource.
 Route::group( [ 'namespace' => 'Api' ], function() {
     Route::apiResource('users', 'UserController');
 });
