@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7385a14c-f93b-4937-b208-242a9169d36d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="7385a14c-f93b-4937-b208-242a9169d36d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,16 +304,15 @@
       <option name="presentableId" value="Default" />
       <updated>1582145048435</updated>
       <workItem from="1582145049858" duration="11809000" />
-      <workItem from="1582227030555" duration="5341000" />
+      <workItem from="1582227030555" duration="5466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17150000" />
+    <option name="totallyTimeSpent" value="17275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="171" y="53" width="1454" height="944" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25354108" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -332,7 +329,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298122" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3298122" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3298122" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
