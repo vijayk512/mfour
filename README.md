@@ -26,17 +26,9 @@ Note(mfour.local is my local environment I created for the application)
 php artisan make:controller UserController --resource "generated a resource full controller"
 
 php artisan route:list
-+--------+-----------+-------------------+---------------+-------------------------------------------------+------------+
-| Domain | Method    | URI               | Name          | Action                                          | Middleware |
-+--------+-----------+-------------------+---------------+-------------------------------------------------+------------+
-|        | GET|HEAD  | api/users         | users.index   | App\Http\Controllers\Api\UserController@index   | api        |
-|        | POST      | api/users         | users.store   | App\Http\Controllers\Api\UserController@store   | api        |
-|        | GET|HEAD  | api/users/{user}  | users.show    | App\Http\Controllers\Api\UserController@show    | api        |
-|        | PUT|PATCH | api/users/{user}  | users.update  | App\Http\Controllers\Api\UserController@update  | api        |
-|        | DELETE    | api/users/{user}  | users.destroy | App\Http\Controllers\Api\UserController@destroy | api        |
-+--------+-----------+-------------------+---------------+-------------------------------------------------+------------+
+Give you all the routes.
 
-
+<hr>
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
