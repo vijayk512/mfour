@@ -1,3 +1,43 @@
+Steps to run API
+zip mfour is laravel API and mfour-curl is core PHP app.
+
+1. Download the repo from google drive share
+2. Please switch to branch mfour (git checkout mfour) master is not having any code.
+3. I used homestead to run the program.
+4. Please add local file for MAC vim/etc/hosts and update homestead.yaml and reload the provision command for that vagrant reload --provision.
+5. do composer install or update to install all the libraries
+6. for database please do php artisan:migrate (I am using MYSQL so please create a database)
+Example:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=root
+DB_PASSWORD=secret
+
+For API access use postman or any other for your preference for API calls. adding all the calls here
+Note(mfour.local is my local environment I created for the application)
+1. To get all the users data please use (GET: http://mfour.local/api/users)
+2. To get only spceific user please use (GET: http://mfour.local/api/users/1)
+3. For creating a new user please use (POST: http://mfour.local/api/users) and all the data
+4. For updating a record please use (PUT: http://mfour.local/api/users/2) and the relevant data
+5. For deleting a record please use (DELETE: http://mfour.local/api/users/1)
+
+php artisan make:controller UserController --resource "generated a resource full controller"
+
+php artisan route:list
++--------+-----------+-------------------+---------------+-------------------------------------------------+------------+
+| Domain | Method    | URI               | Name          | Action                                          | Middleware |
++--------+-----------+-------------------+---------------+-------------------------------------------------+------------+
+|        | GET|HEAD  | api/users         | users.index   | App\Http\Controllers\Api\UserController@index   | api        |
+|        | POST      | api/users         | users.store   | App\Http\Controllers\Api\UserController@store   | api        |
+|        | GET|HEAD  | api/users/{user}  | users.show    | App\Http\Controllers\Api\UserController@show    | api        |
+|        | PUT|PATCH | api/users/{user}  | users.update  | App\Http\Controllers\Api\UserController@update  | api        |
+|        | DELETE    | api/users/{user}  | users.destroy | App\Http\Controllers\Api\UserController@destroy | api        |
++--------+-----------+-------------------+---------------+-------------------------------------------------+------------+
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
